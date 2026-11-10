@@ -1,0 +1,6 @@
+{
+  "name": "Aurelia — Luxury Wedding Invitations & Guest Concierge",
+  "description": "Your love. Your story. Beautifully invited. Bespoke wedding invitations, personalized guest generation, WhatsApp distribution, and RSVP tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

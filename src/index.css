@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --champagne-ivory: #F3EDE2;
+    --soft-champagne: #B59A72;
+    --midnight-charcoal: #292722;
+    --pure-white: #FFFFFF;
+    --gold-accent: #C5A880;
+    --gold-dark: #8C6D45;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--champagne-ivory);
+    color: var(--midnight-charcoal);
+  }
+}
+
+.font-editorial, .font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script, .font-calligraphy {
+  font-family: 'Pinyon Script', 'Alex Brush', cursive, serif;
+}
+
+.font-alex {
+  font-family: 'Alex Brush', 'Pinyon Script', cursive, serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-bodoni {
+  font-family: 'Bodoni Moda', Georgia, serif;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Luxury Foil Shimmer */
+.gold-foil-text {
+  background: linear-gradient(135deg, #A88656 0%, #D4AF37 35%, #F5E5C9 50%, #D4AF37 65%, #8C6D45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rose-foil-text {
+  background: linear-gradient(135deg, #A7736D 0%, #E0A899 35%, #FDE9E4 50%, #C98B82 70%, #8A524A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.silver-foil-text {
+  background: linear-gradient(135deg, #70757D 0%, #BCC3CD 35%, #FFFFFF 50%, #A4ABB5 70%, #5E636A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Paper textures and deckle edges */
+.paper-deckle {
+  box-shadow: 
+    0 1px 3px rgba(41, 39, 34, 0.04),
+    0 8px 24px rgba(41, 39, 34, 0.08),
+    inset 0 0 40px rgba(181, 154, 114, 0.06);
+}
+
+.paper-vellum {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.card-wax-shadow {
+  box-shadow: 0 4px 14px rgba(41, 39, 34, 0.25), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* Print Stylesheet for true 5x7 Invitation Card PDF export */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-invitation-pass, #printable-invitation-pass * {
+    visibility: visible;
+  }
+  #printable-invitation-pass {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  @page {
+    size: 5in 7in;
+    margin: 0;
+  }
+}
